@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+  <head>
+    <title>IT Quiz</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <style>
+      .score{
+        position: absolute;
+        top: 100px;
+        left: 1320px;
+    }
+    h3{
+        color: #ff7e31;
+    }
+    #question{
+        color:#ecf1f5;
+    }
+      .next {
+        background-image: linear-gradient(-180deg, #ff7e31, #e62c03);
+        border-radius: 10px;
+        box-shadow: #0000001a 0 6px 6px;
+        color: #ffffff;
+        cursor: pointer;
+        font-family: sans-serif;
+        font-size: 16px;
+        height: 40px;
+        line-height: 40px;
+        outline: 1px;
+        padding: 0 20px;
+        text-align: center;
+        touch-action: manipulation;
+        user-select: none;
+        border: 0;
+        transition: box-shadow 0.2s;
+      }
+      .logo{
+        width: 150px;
+        position: absolute;
+        top: 30px;
+        left: 30px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <img src="image\qCLogo.png" alt="Our Logo" class = "logo">
+    <div class="container">
+      <h3 class="score">
+        Score:
+        <span id="score">0</span>
+      </h3>
+
+      <h3 id="student"></h3>
+
+      <h1> Quizzically Technical</h1>
+      <div>&nbsp;</div>
+
+      <div id="question"></div>
+
+      <div id="answers"></div>
+
+      <br /><br />
+      
+      <div id="feedback"></div>
+
+      <br/>
+
+        <button id="nextBtn" class="next">Next Question</button>
+    </div>
+
+    <script src="appX.js"></script>
+  </body>
+</html>

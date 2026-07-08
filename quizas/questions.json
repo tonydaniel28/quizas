@@ -1,0 +1,102 @@
+[
+    {
+        "question": "What is one of the best ways to learn programming effectively?",
+        "answers": [
+            "Memorising code without practice",
+            "Practising by writing and testing programs",
+            "Only watching videos",
+            "Avoiding errors"
+        ],
+        "correct": 1
+    },
+    {
+        "question": "What is programming?",
+        "answers": [
+            "Designing computer hardware",
+            "Giving instructions to a computer to perform tasks",
+            "Connecting computers to a network",
+            "Installing operating systems"
+        ],
+        "correct": 1
+    },
+    {
+        "question": "What does IDE stand for?",
+        "answers": [
+            "Internet Development Environment",
+            "Integrated Development Environment",
+            "Internal Data Editor",
+            "Interactive Development Engine"
+        ],
+        "correct": 1
+    },
+    {
+        "question": "Which Python application is commonly used by beginners to write and run Python programs?",
+        "answers": [
+            "Photoshop",
+            "Chrome",
+            "IDLE",
+            "Excel"
+        ],
+        "correct": 2
+    },
+    {
+        "question": "What is the purpose of the Python Shell?",
+        "answers": [
+            "To browse the internet",
+            "To test Python commands interactively",
+            "To create presentations",
+            "To edit images"
+        ],
+        "correct": 1
+    },
+    {
+        "question": "Which Python function displays output on the screen?",
+        "answers": [
+            "input()",
+            "len()",
+            "print()",
+            "int()"
+        ],
+        "correct": 2
+    },
+    {
+        "question": "Which Python function allows a user to enter data?",
+        "answers": [
+            "print()",
+            "input()",
+            "sum()",
+            "len()"
+        ],
+        "correct": 1
+    },
+    {
+        "question": "What does the int() function do?",
+        "answers": [
+            "Counts characters",
+            "Adds numbers",
+            "Converts a value to an integer",
+            "Prints text"
+        ],
+        "correct": 2
+    },
+    {
+        "question": "What is a variable?",
+        "answers": [
+            "A storage location for data in a program",
+            "A programming language",
+            "A type of computer",
+            "A Python function"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Why should reserved words (keywords) not be used as variable names?",
+        "answers": [
+            "They make programs run slower",
+            "They are predefined words with special meanings in Python",
+            "They can only store numbers",
+            "They are used only for comments"
+        ],
+        "correct": 1
+    }
+]
