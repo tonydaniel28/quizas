@@ -154,7 +154,7 @@ function showResults() {
 
     <img src="image/qCodeSymTrans.png" alt="Quiz Logo" class="logo">
 
-      <h1>Quiz Complete</h1>
+      <h1>Quiz Completed</h1>
 
       <h2>${studentName}</h2>
 
