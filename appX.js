@@ -178,9 +178,9 @@ function showResults() {
 
   document.body.innerHTML = `
 
-    <div style="text-align:left; padding:80px;">
+    <div style="text-align:left; padding:120px;">
 
-    <img src="image/qCodeSymTrans.png" alt="Quiz Logo" class="logo">
+    <img src="image/qCodeSymTrans.png" alt="Quiz Logo" class="logo" style ="width:40px">
 
       <h1>Quiz Completed</h1>
 
