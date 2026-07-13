@@ -6,6 +6,7 @@ document.getElementById('student').textContent =
 let questions = [];
 let currentQuestion = 0;
 let score = 0;
+let incorrectAnswers = [];
 
 fetch('questions.json')
   .then((response) => response.json())
@@ -58,8 +59,8 @@ function checkAnswer(selectedAnswer) {
     const buttons = document.querySelectorAll('#answers button');
 
     const correctButton = buttons[q.correct];
-    correctButton.style.backgroundColor = "#f4ffdd";
-    correctButton.style.color = "#010101";
+    correctButton.style.backgroundColor = '#f4ffdd';
+    correctButton.style.color = '#010101';
 
     buttons.forEach((button) => {
       button.disabled = true;
@@ -68,9 +69,26 @@ function checkAnswer(selectedAnswer) {
     // alert("Incorrect!");
     document.getElementById('feedback').innerHTML =
       `<h3>Try again</h3>`;
+
+    incorrectAnswers.push({
+      questionNumber: currentQuestion + 1,
+      question: q.question,
+      selectedAnswer: q.answers[selectedAnswer],
+      correctAnswer: q.answers[q.correct],
+    });
   }
 
   document.getElementById('score').textContent = score;
+
+  async function getFeedback(item) {
+
+    return `
+        The correct answer is:
+        ${item.correctAnswer}
+
+        Review this concept and try again.
+    `;
+}
 }
 
 // Next button
@@ -89,25 +107,69 @@ document
   });
 
 // Show final result
+
 function showResults() {
-  // Save result locally
-  let results = JSON.parse(localStorage.getItem('results')) || [];
+
+  let results =
+    JSON.parse(localStorage.getItem('results')) || [];
 
   results.push({
     name: studentName,
     score: score,
   });
 
-  localStorage.setItem('results', JSON.stringify(results));
+  localStorage.setItem(
+    'results',
+    JSON.stringify(results)
+  );
+
+  let feedbackHtml = '';
+
+  incorrectAnswers.forEach(item => {
+
+    feedbackHtml += `
+      <div class="feedback">
+
+        <h3>${item.question}</h3>
+
+        <p>
+          <strong>Your Answer:</strong>
+          ${item.selectedAnswer}
+        </p>
+
+        <p>
+          <strong>Correct Answer:</strong>
+          ${item.correctAnswer}
+        </p>
+
+      </div>
+
+      <hr>
+    `;
+  });
 
   document.body.innerHTML = `
-        <div style="text-align:center; padding:40px;">
-            <h1>Quiz Complete</h1>
-            <h2>${studentName}</h2>
-            <h2>Final Score: ${score}/${questions.length}</h2>
-            <img src="image/qCLogo.png" alt="Our Logo" class = "logo"></img>
-            </div>
-    `;
+
+    <div style="text-align:left; padding:80px;">
+
+    <img src="image/qCodeSymTrans.png" alt="Quiz Logo" class="logo">
+
+      <h1>Quiz Complete</h1>
+
+      <h2>${studentName}</h2>
+
+      <h2>
+        Final Score:
+        ${score}/${questions.length}
+      </h2>
+
+      <h2>Review Your Incorrect Answers</h2>
+
+      ${feedbackHtml}
+
+    </div>
+
+  `;
 }
 // Start quiz
-// loadQuestion();
+// Modified 13/07/2026
