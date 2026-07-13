@@ -1,3 +1,5 @@
+alert("APPX VERSION TEST");
+
 const studentName = prompt('Enter your name:') || 'Guest';
 
 document.getElementById('student').textContent =
