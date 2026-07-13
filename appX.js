@@ -97,15 +97,32 @@ function checkAnswer(selectedAnswer) {
 document
   .getElementById('nextBtn')
   .addEventListener('click', function () {
+
     currentQuestion++;
 
-    document.getElementById('feedback').innerHTML = `<h3>&nbsp;</h3>`;
+    console.log(
+      "currentQuestion:",
+      currentQuestion
+    );
+
+    console.log(
+      "questions.length:",
+      questions.length
+    );
 
     if (currentQuestion < questions.length) {
+
+      console.log("Loading next question");
+
       loadQuestion();
+
     } else {
+
+      alert("Reached ELSE");
+
       showResults();
     }
+
   });
 
 // Show final result
