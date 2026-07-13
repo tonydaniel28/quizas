@@ -109,6 +109,7 @@ document
 // Show final result
 
 function showResults() {
+  alert("showResults called");
   console.log("showResults called");
 
 console.log("incorrectAnswers =", incorrectAnswers);
