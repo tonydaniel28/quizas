@@ -1,4 +1,4 @@
-alert("APPX VERSION TEST");
+// alert("APPX VERSION TEST");
 
 const studentName = prompt('Enter your name:') || 'Guest';
 
@@ -100,15 +100,15 @@ document
 
     currentQuestion++;
 
-    console.log(
-      "currentQuestion:",
-      currentQuestion
-    );
+    // console.log(
+    //   "currentQuestion:",
+    //   currentQuestion
+    // );
 
-    console.log(
-      "questions.length:",
-      questions.length
-    );
+    // console.log(
+    //   "questions.length:",
+    //   questions.length
+    // );
 
     if (currentQuestion < questions.length) {
 
@@ -118,7 +118,7 @@ document
 
     } else {
 
-      alert("Reached ELSE");
+      // alert("Reached ELSE");
 
       showResults();
     }
@@ -128,15 +128,15 @@ document
 // Show final result
 
 function showResults() {
-  alert("showResults called");
-  console.log("showResults called");
+  // alert("showResults called");
+//   console.log("showResults called");
 
-console.log("incorrectAnswers =", incorrectAnswers);
+// console.log("incorrectAnswers =", incorrectAnswers);
 
-console.log(
-    "incorrectAnswers.length =",
-    incorrectAnswers.length
-);
+// console.log(
+//     "incorrectAnswers.length =",
+//     incorrectAnswers.length
+// );
 //--------------------------
   let results =
     JSON.parse(localStorage.getItem('results')) || [];
