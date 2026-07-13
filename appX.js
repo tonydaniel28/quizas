@@ -109,7 +109,15 @@ document
 // Show final result
 
 function showResults() {
+  console.log("showResults called");
 
+console.log("incorrectAnswers =", incorrectAnswers);
+
+console.log(
+    "incorrectAnswers.length =",
+    incorrectAnswers.length
+);
+//--------------------------
   let results =
     JSON.parse(localStorage.getItem('results')) || [];
 
