@@ -25,6 +25,9 @@ fetch('questions.json')
 
 // Display a question
 function loadQuestion() {
+
+  document.getElementById("nextBtn").disabled = true;
+  
   const q = questions[currentQuestion];
 
   document.getElementById('question').innerHTML =
@@ -49,6 +52,9 @@ function loadQuestion() {
 
 // Check answer
 function checkAnswer(selectedAnswer) {
+
+  document.getElementById("nextBtn").disabled = false;
+  
   const q = questions[currentQuestion];
 
   if (selectedAnswer === q.correct) {
