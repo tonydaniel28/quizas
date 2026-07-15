@@ -70,7 +70,12 @@ function checkAnswer(selectedAnswer) {
   } else {
     // alert("Incorrect!");
     document.getElementById('feedback').innerHTML =
-      `<h3>Try again</h3>`;
+      `<h3>Review feedback at the end of this session and try again</h3>`;
+      
+    const buttons = document.querySelectorAll('#answers button');
+    buttons.forEach((button) => {
+      button.disabled = true;
+    });
 
     incorrectAnswers.push({
       questionNumber: currentQuestion + 1,
