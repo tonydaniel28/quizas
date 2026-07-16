@@ -27,6 +27,8 @@ fetch('questions.json')
 function loadQuestion() {
 
   document.getElementById("nextBtn").disabled = true;
+  document.getElementById("nextBtn").style.cursor = "not-allowed";
+  document.getElementById("nextBtn").style.opacity = ".9";
   
   const q = questions[currentQuestion];
 
@@ -54,6 +56,8 @@ function loadQuestion() {
 function checkAnswer(selectedAnswer) {
 
   document.getElementById("nextBtn").disabled = false;
+  document.getElementById("nextBtn").style.cursor = "pointer";
+  document.getElementById("nextBtn").style.opacity = "1";
   
   const q = questions[currentQuestion];
 
