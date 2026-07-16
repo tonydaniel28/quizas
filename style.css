@@ -22,11 +22,6 @@ button {
   cursor: pointer;
 }
 
-button: disabled {
-  opacity: 0.9;
-  cursor: not-allowed;
-}
-
 .correct {
   background-color: #4caf50;
   color: white;
